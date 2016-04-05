@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.params=xPos\ yPos\ col\ direc
+comment0.target=Segment(int,\ int,\ java.awt.Color,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Segment\r\n
+comment1.params=
+comment1.target=int\ getXPosicion()
+comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.params=
+comment2.target=int\ xPosicionFinal()
+comment3.params=
+comment3.target=int\ getYPosicion()
+comment4.params=
+comment4.target=int\ yPosicionFinal()
+comment5.params=
+comment5.target=int\ getDireccion()
+comment6.params=
+comment6.target=java.awt.Color\ getColor()
+comment7.params=lienzo
+comment7.target=void\ dibujar(Canvas)
+comment8.params=lienzo
+comment8.target=void\ borrar(Canvas)
+comment9.params=segmento
+comment9.target=boolean\ colisiona(Segment)
+numComments=10

@@ -44,7 +44,7 @@ public class SnakeGame
             snake.dibujar(lienzo);
             int index = 0;
             for(Segment segmentos:segmentosSerpiente){
-                while(moverse && index < segmentosSerpiente.size() - 1){
+                while(moverse && index < segmentosSerpiente.size() -1 ){
 
                     lienzo.eraseCircle( segmentos.getPosicionFinalX(),segmentos.getPosicionFinalX(),8);
 

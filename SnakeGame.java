@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Write a description of class SnakeGame here.
  * 
@@ -7,27 +7,56 @@
  */
 public class SnakeGame
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private Canvas lienzo;
+    private Snake snake;
+    private static final int ANCHO_LIENZO = 500;
+    private static final int ALTO_LIENZO = 500;
+    private ArrayList<Segment> segmentosSerpiente;
 
-    /**
-     * Constructor for objects of class SnakeGame
+    /*
+     * Constructor de la clase Snake
      */
     public SnakeGame()
     {
-        // initialise instance variables
-        x = 0;
+        lienzo = new Canvas("Snake game", ANCHO_LIENZO, ALTO_LIENZO);
+        segmentosSerpiente = new ArrayList<>();
+
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+    /*
+     * Dibuja una serpiente en la pantalla
      */
-    public int sampleMethod(int y)
+    public void drawSnake()
     {
-        // put your code here
-        return x + y;
+        snake = new Snake(ANCHO_LIENZO,ALTO_LIENZO);
+        lienzo.erase();
+        snake.dibujar(lienzo);
+
     }
+
+    public void animateSnake()
+    {
+        boolean moverse = true;
+        while(moverse)
+        {
+            lienzo.wait(300);
+            snake.borrar(lienzo);
+            snake.dibujar(lienzo);
+            int index = 0;
+            for(Segment segmentos:segmentosSerpiente){
+                while(moverse && index < segmentosSerpiente.size() - 1){
+
+                    lienzo.eraseCircle( segmentos.getPosicionFinalX(),segmentos.getPosicionFinalX(),8);
+
+                }
+
+            }
+            moverse = snake.mover();
+
+        }
+        lienzo.drawString("GAME OVER",220, 240);
+
+    }
+
 }
+

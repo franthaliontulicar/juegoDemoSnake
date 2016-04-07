@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=SnakeGame()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Snake\r\n
+comment1.params=
+comment1.target=void\ drawSnake()
+comment1.text=\r\n\ Dibuja\ una\ serpiente\ en\ la\ pantalla\r\n
+comment2.params=
+comment2.target=void\ animateSnake()
+numComments=3

@@ -36,23 +36,11 @@ public class SnakeGame
 
     public void animateSnake()
     {
-        boolean moverse = true;
-        while(moverse)
-        {
-            lienzo.wait(300);
-            snake.borrar(lienzo);
+       
+       while(snake.mover()){
+            lienzo.wait(500);
+            lienzo.erase();
             snake.dibujar(lienzo);
-            int index = 0;
-            for(Segment segmentos:segmentosSerpiente){
-                while(moverse && index < segmentosSerpiente.size() -1 ){
-
-                    lienzo.eraseCircle( segmentos.getPosicionFinalX(),segmentos.getPosicionFinalX(),8);
-
-                }
-
-            }
-            moverse = snake.mover();
-
         }
         lienzo.drawString("GAME OVER",220, 240);
 
